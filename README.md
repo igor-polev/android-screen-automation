@@ -27,7 +27,7 @@ Clone with submodules:
 
 ## Usage
 
-    eve_bot <config.json>
+    asa <config.json>
 
 ## Third-party code
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(eve_bot)
+project(asa)
 
 set(CMAKE_CXX_STANDARD          17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -27,10 +27,10 @@ add_library(v4l2cpp STATIC
 # project itself
 aux_source_directory(
     ${PROJECT_SOURCE_DIR}/source
-    ABOT_FILES
+    ASA_FILES
 )
-add_library(abots STATIC
-    ${ABOT_FILES}
+add_library(libasa STATIC
+    ${ASA_FILES}
 )
 
 # the program
@@ -38,7 +38,7 @@ add_executable(${PROJECT_NAME}
     main.cpp
 )
 target_link_libraries(${PROJECT_NAME}
-    abots
+    libasa
     v4l2cpp
     ${nlohmann_json_LIBS}
     ${OpenCV_LIBS}
